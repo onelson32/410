@@ -1,0 +1,348 @@
+
+<!doctype html>
+
+<html>
+	
+<head>
+	
+<!--The following displays language used in browser to interpret page -->
+<meta charset="UTF-8">
+
+<!--The following line of code displays the page title on a browser tab -->
+<title>Real World Readiness | Home</title>
+
+<!--link tags are for linking to external files, in this case your CSS stylesheet-->
+<link href="style.css" rel="stylesheet" type="text/css">
+	
+<!--link tags are for linking to external files, in this case a special CSS stylesheet-->
+<link href="normalize.css" rel="stylesheet" type="text/css">
+
+<!--the following tag tells the browser to adjust the site according to screen size-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--The following code links to the jquery library -->
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+
+<!--The following code links to the javascript file that runs the slideshow -->	
+<script type="text/javascript" src="js/jquery.cycle2.min.js"></script>
+    
+<!--The following code links to the javascript file that runs the parallax image -->    
+<script src="js/parallax.min.js"></script>
+	
+<!--The following code links to Google Fonts-->
+<link href="https://fonts.googleapis.com/css?family=Raleway:900|Rubik" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	
+<!--The following javscript runs the jquery slideshow -->
+<script type="text/javascript">
+$('#slider').cycle({});
+</script>
+
+<!--The following javascript runs the nav bar dissapear on scroll-->
+<script type="text/javascript">
+// Hide Header on on scroll down
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('header').outerHeight();
+
+$(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
+    
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+    
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $('header').removeClass('nav-down').addClass('nav-up');
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $('header').removeClass('nav-up').addClass('nav-down');
+        }
+    }
+    
+    lastScrollTop = st;
+}
+</script>
+    
+<!--The following adds favicon images -- be sure to verify paths-->
+
+<link rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png">
+<link rel="manifest" href="img/fav/site.webmanifest">
+<link rel="mask-icon" href="img/fav/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+    
+<!--back to top button-->
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<script>
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}    
+</script>   
+</head>
+
+<body>
+
+<!--beginning of navigation section-->
+<header>
+<div class="nav-container">
+<div class="brand"><img src="img/logo.png" width="190" height="75" alt=""/></div>
+<nav>
+<div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+  <ul class="nav-list">
+        <li>
+          <a href="#home">Welcome</a>
+        </li>
+	   <li>
+          <a href="#gal">Resume Tips</a>
+		  </li>
+	  	<li>
+          <a href="#tl">Establishing Balance</a>
+        </li>
+        <li>
+          <a href="#vid">Landing An Internship</a>
+			</li>
+      <li>
+          <a href="#num">The Numbers</a>
+			</li>
+      </ul>
+</nav>
+</div>
+<!--closing navigation tag-->
+</header>
+<!--end of navigation section-->
+    
+<!--main image-->
+<div class="container">
+	
+    <!--animated welcome-->
+    <link href="https://fonts.googleapis.com/css?family=Zilla+Slab:700" rel="stylesheet">
+
+<div class="container1">
+    <p class="title title1">  <p>
+</div>
+<div class="container1">
+    <p class="title title2">  <p>
+</div>
+<div class="container1">
+    <p class="title title3">Are<p>
+</div>
+<div class="container1">
+    <p class="title title4">you<p>
+</div>
+<div class="container1">
+    <p class="title title5">ready?<p>
+</div>
+    
+</div>
+
+<!--beginning of main content area-->
+<div class="row">
+<h2 id="home">    <br> "Welcome to the real world."</h2>
+<article>
+<p class="tab">This outdated idiom is one many of us recall not so fondly, a tired and overused phrase used tell young adults that "that's just the way life is." I promise, the "real world" is not as scary as this phrase makes it out to be. This site pools together advice from Cal Poly students who have been to the real world and made it back unscathed. Read on to discover their tips and tricks for surviving — dare I say, thriving — life post-grad. Wisdom awaits... </p>
+<p class="tab"><a href="#gal">Resume Tips</a></p>
+</article>
+</div>
+
+<!--beginning of slideshow section-->
+    <div class="row orangeBG">
+<div class="row"><!--beginning of row-->
+<h2 id="gal">Simple Tips To Revamp Your Resume</h2>
+<article><!--beginning of article-->
+<p class="tab"> Resumes can be daunting. Utilize these simple tips from Cal Poly peers to get your resume application-ready.</p>
+<!--beginning of slideshow-->
+<div id="slider"
+data-cycle-caption="#alt-caption"
+data-cycle-caption-template="{{alt}}"
+data-cycle-fx="scrollHorz"
+data-cycle-pause-on-hover="true"
+data-cycle-speed="200">
+<div class="cycle-prev"></div>
+<div class="cycle-next"></div>
+<img src="img/1.jpg" width="100%" height="100%" alt="Front Porch, San Luis Obispo, Oct. 14, 2019｜Journalism senior Megan LaChance and business administration senior Vince DeSantis sit together outside of San Luis Obispo’s Front Porch. LaChance and DeSantis are tackling the all-important task of editing LaChance’s resumè. DeSantis is an Orfalea College of Business Peer Mentor and Student Ambassador and has helped fellow students with career readiness in those roles. Before he begins editing, he asks LaChance, “What do you like best about your resumè?" ”/>
+<img src="img/2.jpg" width="100%" height="100%" alt="Front Porch, San Luis Obispo, Oct. 14, 2019｜DeSantis begins his editing process with a quick scan of the resumè. He assures LaChance that her resumè is a great start, but he quickly begins to identify areas for improvement. A copy edit reveals what DeSantis describes as “common mistakes:” wasted space, incorrect capitalization and inconsistencies in language. He drags a red pencil across the page to indicate these errors, one of which is wide margins—a problem he claims leads to underutilized space."/>
+<img src="img/3.jpg" width="100%" height="100%" alt="Front Porch, San Luis Obispo, Oct. 14, 2019｜LaChance looks on with focus, noting the edits being made. “I always left a lot of white space because it made the resumè look less daunting,” said LaChance. DeSantis explained that while it’s smart to not overwhelm the page with content everywhere, “you have to strike a happy medium” to still achieve a one-page, concise resumè."/>
+<img src="img/4.jpg" width="100%" height="100%" alt="Front Porch, San Luis Obispo, Oct. 14, 2019｜The two chat about LaChance’s resumè choices, specifically why she still includes high school experience. “I’d suggest removing it now that you’re a senior and just ‘beef up’ your college involvement instead,” DeSantis said."/>
+<img src="img/5.jpg" width="100%" height="100%" alt="Front Porch, San Luis Obispo, Oct. 14, 2019｜After an initial round of copy edits, DeSantis dives into design recommendations for a more streamlined resumè. He uses Canva, a free graphic design website, as the site already has resumè templates available. The two scan the site to find a design that LaChance likes."/>
+<img src="img/6.jpg" width="100%" height="100%" alt="Front Porch, San Luis Obispo, Oct. 14, 2019｜ DeSantis and LaChance are joined by DeSantis’ coworker Eunice Lee, a senior business administration student and an Orfalea College of Business Peer Mentor. Lee is minoring in integrated marketing communications and offers design advice for LaChance’s revamped resumè."/>
+<img src="img/7.jpg" width="100%" height="100%" alt="Front Porch, San Luis Obispo, Oct. 14, 2019｜With red pencil in hand, Lee makes suggestions for the design as DeSantis executes the new appearance. “I always suggest Canva when I help people with resumès,” Lee said. “The templates are flexible and really easy to update whenever you have new work experience. It definitely adds some personality to the resumè.”"/>
+<img src="img/8.jpg" width="100%" height="100%" alt="Front Porch, San Luis Obispo, Oct. 14, 2019｜As the three edit away, Cal Poly students pass by, coming and going from Cal Poly’s buzzing campus."/>
+<img src="img/9.jpg" width="100%" height="100%" alt="Front Porch, San Luis Obispo, Oct. 14, 2019｜DeSantis navigates Canva and starts inputting LaChance’s most recent experience with edits made earlier. Careful arrangement and concise text brings LaChance’s resumè down to one page. He adds an awards and a skills section at the bottom of the resumè, “to paint a more holistic picture of [LaChance] as a job candidate.”"/>
+<img src="img/10.jpg" width="100%" height="100%" alt="Front Porch, San Luis Obispo, Oct. 14, 2019｜While resumè editing may not be the most glamorous task, DeSantis and Lee keep LaChance laughing through the process. “I felt a bit intimidated showing them my resumè at first,” LaChance said. “But they were both so approachable and it’s a bit less daunting to show people your age your resumè. The final product is a major improvement.”
+"/>
+    <img src="img/11.jpg" width="100%" height="100%" alt="LaChance’s resumè is now refined, professional and application-ready. DeSantis’ and Lee’s simple edits to design and syntax replace the previous two-page document, bringing the resumè to post-grad caliber."/>
+</div><!--end of slideshow-->
+<!--beginning of slideshow caption-->
+<div id="alt-caption" class="center">
+</div><!--end of slideshow caption-->
+<p class="tab"><a href="#tl">Balance</a></p>
+</article><!--end of article-->
+</div><!--end of row-->
+    </div>
+<!--end of slideshow section-->
+    
+	
+<!--beginning of audio section-->
+    <div class="offwhiteBG">
+<div class="row-int">
+<h2 id="tl">   <br>   Creating Balance</h2>
+<article>
+    
+  <p class="tab">Click on images to hear how these three students have created balance in their life that they plan to carry with them post-grad. From left to right: Kinesiology sophomore Gabi Dallman, business administration senior Matt Hasse, wine and viticulture sophmore Tracy Mann <br>(Double-click to pause audio)</p>
+  <div class="table">
+	<div id="trip">
+<audio id="audio_1">
+    <source src="audio/1.mp3" type="audio/mpeg" />
+</audio>
+            
+<audio id="audio_2">
+    <source src="audio/2.mp3" type="audio/mpeg" />
+</audio>
+            
+<audio id="audio_3">
+	<source src="audio/3.mp3" type="audio/mpeg" />
+</audio>
+      </div>
+        
+    <div class="polaroid-images">
+            
+<b href="" title="Gabi"><img src="img/rollover/1.jpg" class="rollover" alt="Gabi" title= "Gabi" onMouseOver="this.src='img/rollover/1.2.jpg'" onMouseOut="this.src='img/rollover/1.jpg'" onClick="document.getElementById('audio_1').play(); return false;" onDblClick="document.getElementById('audio_1').pause(); return false;"></b>
+ /&gt; 
+            
+<b href="" title="Matt"><img src="img/rollover/2.jpg" class="rollover" alt="Matt" title="Matt" onMouseOver="this.src='img/rollover/2.2.jpg'" onMouseOut="this.src='img/rollover/2.jpg'" onClick="document.getElementById('audio_2').play(); return false;" onDblClick="document.getElementById('audio_2').pause(); return false;"></b>
+        
+ <b href="" title="Tracy"><img src="img/rollover/3.jpg" class="rollover" alt="Tracy" title="Tracy" onMouseOver="this.src='img/rollover/3.2.jpg'" onMouseOut="this.src='img/rollover/3.jpg'" onClick="document.getElementById('audio_2').play(); return false;" onDblClick="document.getElementById('audio_2').pause(); return false;"></b>
+        
+ /&gt;
+            
+	</div>
+</div>	
+    <p class="tab"><a href="#vid">Internship Tips</a></p>
+</article>
+    </div>
+        </div>
+<!--end of audio section-->
+    
+    <!--beginning of parallax image-->
+<div class="parallax" data-parallax="scroll" data-bleed="10" data-speed="0.2" iosFix="true" data-image-src="img/parallax.png">
+</div>
+<!--end of parallax image-->
+
+<!--beginning of video section-->
+<div class="row orangeBG">
+<h2 id="vid">    <br> Landing An Internship: Tips From A Former LinkedIn Intern</h2>
+<article>
+<p class="tab">Senior business administration student and former LinkedIn intern Claire Chatelain offers her advice to students seeking an internship.</p>	
+<video width="100%" height="100%" poster="img/videostill.png" controls>
+<source src="img/video.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<p class="tab"><a href="#num">The Numbers</a></p>
+</article>
+</div>
+<!--end of video section-->
+
+<!--beginning of new section-->
+<div class="row whiteBG">
+<h2 id="num">   <br> The Numbers</h2>
+<article>
+<p class="tab"></p>
+<div class="infogram-embed" data-id="7aafe968-6981-4fbb-885b-57a66a4e94f9" data-type="interactive" data-title="Back To School Infographic"></div><script>!function(e,i,n,s){var t="InfogramEmbeds",d=e.getElementsByTagName("script")[0];if(window[t]&&window[t].initialized)window[t].process&&window[t].process();else if(!e.getElementById(n)){var o=e.createElement("script");o.async=1,o.id=n,o.src="https://e.infogram.com/js/dist/embed-loader-min.js",d.parentNode.insertBefore(o,d)}}(document,0,"infogram-async");</script><div style="padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px solid #dadada;margin:0 30px"><br></div>
+</article>
+</div>
+<!--end of new section-->
+	
+<!--beginning of footer-->
+<footer>Real World Readiness | San Luis Obispo, CA | <a href="mailto: livnel32@yahoo.com?Subject=Inquiry" target="_top">Send Email</a> | Copyright 2019 | Site by Olivia Nelson 
+</footer>
+<!--end of footer-->
+	
+</body>
+	
+<!--the following script controls the responsive navigation-->
+<script>
+	(function($) { // Begin jQuery
+  $(function() { // DOM ready
+    // If a link has a dropdown, add sub menu toggle.
+    $('nav ul li a:not(:only-child)').click(function(e) {
+      $(this).siblings('.nav-dropdown').toggle();
+      // Close one dropdown when selecting another
+      $('.nav-dropdown').not($(this).siblings()).hide();
+      e.stopPropagation();
+    });
+    // Clicking away from dropdown will remove the dropdown class
+    $('html').click(function() {
+      $('.nav-dropdown').hide();
+    });
+    // Toggle open and close nav styles on click
+    $('#nav-toggle').click(function() {
+      $('nav ul').slideToggle();
+    });
+    // Hamburger to X toggle
+    $('#nav-toggle').on('click', function() {
+      this.classList.toggle('active');
+    });
+  }); // end DOM ready
+})(jQuery); // end jQuery
+	</script>
+	<script>
+	var headertext = [];
+var headers = document.querySelectorAll("#miyazaki th"),
+tablerows = document.querySelectorAll("#miyazaki th"),
+tablebody = document.querySelector("#miyazaki tbody");
+for(var i = 0; i < headers.length; i++) {
+	var current = headers[i];
+	headertext.push( current.textContent.replace( /\r?\n|\r/,"") );
+}
+for (var i = 0, row; row = tablebody.rows[i]; i++) {
+	for (var j = 0, col; col = row.cells[j]; j++) {
+		col.setAttribute("data-th", headertext[j]);
+	}
+}
+</script>
+	
+	<!----Prevents audio tracks from playing simultaneously---->
+<script>
+document.addEventListener('play', function(e){
+    var audios = document.getElementsByTagName('audio');
+    for(var i = 0, len = audios.length; i < len;i++){
+        if(audios[i] != e.target){
+            audios[i].pause();
+        }
+    }
+}, true);
+    </script>
+
+</html>

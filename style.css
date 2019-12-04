@@ -1,0 +1,726 @@
+/* CSS Document */
+
+/*----------------PARALLAX IMAGE-----------------*/
+.parallax {
+	min-height: 450px;
+	background: transparent;
+	padding-top: 35px;
+}
+
+
+body {
+	color: black; /*(default font color for the entire page)*/
+    font-family: "Century Gothic", sans-serif;
+	font-weight: 300; /*(font thickness)*/
+	-webkit-font-smoothing: antialiased;/*(helps with readability)*/
+}
+
+/*----------------polaroid-----------------*/
+
+.polaroid-images b
+{
+	background: white;
+	display: inline;
+	float: left;
+	margin: 0 15px 30px;
+	padding: 10px 10px 25px 0;
+	text-align: center;
+	text-decoration: none;
+	-webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+	-moz-box-shadow: 0 4px 6px rgba(0,0,0,.3);
+	box-shadow: 0 4px 6px rgba(0,0,0,.3);
+	-webkit-transition: all .15s linear;
+	-moz-transition: all .15s linear;
+	transition: all .15s linear;
+	z-index:2;
+}
+
+
+.polaroid-images b:after {
+	color: #333;
+	font-size: 20px;
+	content: attr(title);
+	position: relative;
+	top:15px;
+}
+
+.polaroid-images img {
+	display: block;
+	width: inherit;
+}
+
+.polaroid-images b:nth-child(2n)
+{
+	-webkit-transform: rotate(4deg);
+	-moz-transform: rotate(4deg);
+	transform: rotate(4deg);
+}
+.polaroid-images b:nth-child(3n) {
+	-webkit-transform: rotate(-24deg);
+	-moz-transform: rotate(-24deg);
+	transform: rotate(-24deg);
+}
+.polaroid-images b:nth-child(4n)
+{
+	-webkit-transform: rotate(14deg);
+	-moz-transform: rotate(14deg);
+	transform: rotate(14deg);
+}
+.polaroid-images b:nth-child(5n)
+{
+	-webkit-transform: rotate(-18deg);
+	-moz-transform: rotate(-18deg);
+	transform: rotate(-18deg);
+}
+
+.polaroid-images b:hover{
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+        transform: rotate(0deg);
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+        transform: scale(1.2);
+	z-index:10;
+	-webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+	-moz-box-shadow: 0 10px 20px rgba(0,0,0,.7);
+        box-shadow: 0 10px 20px rgba(0,0,0,.7);
+}
+
+/*----------------navigation section-----------------*/
+header {
+	height: 105px; /*(height of nav bar)*/
+	position: fixed; /*(keeps nav bar visible when scrolling)*/
+	width: 100%;
+	top: 0;
+	z-index: 5; /*(ensures nav bar appears in front of other elements)*/
+	font-size: 1em;
+    transition: top 0.2s ease-in-out;
+    background-color: white;
+    opacity: 0.75;
+}
+
+/*----------------navigation container-----------------*/
+.nav-container {
+  margin: 0 auto;
+}
+
+/*----------------text-based logo-----------------*/
+.brand {
+    padding: 15px 0 15px 45px;
+    float: left;
+}
+
+/*----------------mobile navigation--------------------*/
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #ffffff;
+  height: 70px;
+  width: 70px;
+}
+
+/*----------------navigation buttons-----------------*/
+nav {
+  float: right;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  float: left;
+  position: relative;
+}
+nav ul li a,
+nav ul li a:visited {
+    display: block;
+    padding: 0 20px;
+    line-height: 105px;
+    background-color: #FFFFFF;
+    color: #80644a;
+    text-decoration: none;
+	font-weight: bold;
+}
+nav ul li a:hover,
+nav ul li a:visited:hover {
+    background-color: #80644a;
+    color: #FFFFFF;
+}
+nav ul li a:not(:only-child):after,
+nav ul li a:visited:not(:only-child):after {
+  padding-left: 4px;
+  content: ' Ã¢â€“Â¾';
+}
+nav ul li ul li {
+  min-width: 190px;
+}
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+}
+.nav-dropdown {
+  position: absolute;
+  display: none;
+  z-index: 5;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}	
+
+a.text:link, a.text:visited {
+    background-color: #c98342;
+    color: white;
+    padding: 4px 4px;
+    text-align: center;
+    text-decoration: none;
+}
+a.text:hover, a.text:active {
+    background-color: white;
+    color: black;
+}
+.row a{
+	color: floralwhite;
+    font-family: "Century gothic",sans-serif;
+    text-transform: uppercase;
+    padding: .5rem 1rem;
+    padding-right: 2rem;
+    border-radius: 30px;
+    margin: 40px auto;
+    text-align: center;
+    position: relative;
+    display: block;
+    width: 175px;
+    letter-spacing: .3px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: initial;
+    background: url(img/arrow.png) #b37232;
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: 96%;
+	text-decoration: none;
+    z-index: 1;
+}
+.row a:hover{
+	    background-color: #8d3917;
+    color: floralwhite;
+	    text-decoration: none;
+    transition: all 0.3s ease-in 0s;
+}
+
+.row-int a{
+	color: floralwhite;
+    font-family: "Century gothic",sans-serif;
+    text-transform: uppercase;
+    padding: .5rem 1rem;
+    padding-right: 2rem;
+    border-radius: 30px;
+    margin: 40px auto;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    text-align: center;
+    position: relative;
+    width: 175px;
+    letter-spacing: .3px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: initial;
+    background: url(img/arrow.png) #b37232;
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: 96%;
+	text-decoration: none;
+    z-index: 1;
+}
+.row-int a:hover{
+	    background-color: #8d3917;
+    color: floralwhite;
+	    text-decoration: none;
+    transition: all 0.3s ease-in 0s;
+}
+
+/*----------------media queries-----------------*/
+
+/*If device width is less than or equal to 800px, then do ...*/
+@media only screen and (max-width: 800px) {
+    
+.title {
+  display:inline;
+  position:relative;
+    font-family: 'Century Gothic', sans-serif;
+  color: #2b2d2f;
+    max-height: 20px;
+    font-size: 16px !important;
+    line-height: normal;
+}
+
+.container1 {
+  //border:1px solid pink;
+  //width:720px;
+  height:70px !important;
+  margin: 0 auto;
+  position:relative;
+  overflow:hidden;
+}  
+    
+    h2 {
+        font-size: 35px !important;
+    }
+  .nav-mobile {
+    display: block;
+      background-color: white;
+      opacity: 0.75;
+  }
+  nav {
+    width: 100%;
+    padding: 70px 0 15px;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    float: none;
+  }
+  nav ul li a {
+    padding: 15px;
+    line-height: 20px;
+    background-color: white;
+    opacity: 0.75;
+  }
+  nav ul li ul li a {
+    padding-left: 30px;
+  }
+
+  .nav-dropdown {
+    position: static;
+  } 
+    
+  .brand {
+	position: absolute;
+	padding-left: 80px;
+	float: left;
+	color: #000000;
+	font-family: sans-serif;
+	font-size: small;
+  }
+	
+	.image2 {
+	cursor:pointer;
+	width: 90%;
+	height: 90%;
+}
+	
+}
+
+@media screen and (min-width: 800px) {  
+    
+    
+/*-----styles for jquery dropdown menu-----*/
+  .nav-list {
+    display: block !important;
+  }
+}
+
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: #000000;
+  position: absolute;
+  display: block;
+  content: '';
+  transition: all 300ms ease-in-out;
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+/*----------------Main Image-----------------*/
+
+.image1 {
+	width: 100%;
+}
+
+/*----------------MAIN TEXT OVER IMAGE - optional-----------------*/
+.container {
+	position: relative;
+    background-image: url(img/main2.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: 50% 50%;
+    font-size: 12px
+}
+
+/* Centers text, adds semi-transparent border *
+.centered {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 10px solid rgba(255, 255, 255, 0.8);
+    font-family: 'Kaushan Script', cursive;
+	color:yellow;
+	top: 50%;
+}
+
+/*----------------Animation-----------------*/
+
+h3 {
+  background-color:black;
+  margin:30px;
+  font-family: 'Zilla Slab', serif;
+  color:white;
+  font-size:72px;
+  line-height:90px;
+  text-align:left;
+}
+
+.container1 {
+  //border:1px solid pink;
+  //width:720px;
+  height:110px;
+  margin: 0 auto;
+  position:relative;
+  overflow:hidden;
+}
+
+.title {
+  display:inline;
+  position:relative;
+font-family: 'Century Gothic', sans-serif;
+  color: #2b2d2f;
+  font-size:72px;
+  line-height:90px;
+    
+}
+
+.title1 {
+
+
+  animation-name: intro;
+  animation-duration:1s;
+  animation-iteration-count:10;
+
+  animation-timing-function:ease;
+  animation-delay:1s;
+  animation-fill-mode:backwards;
+ }
+
+@keyframes intro {
+  0% {
+    top:150px;
+  } 
+  98% {
+    top:-5px;
+  }
+  100% {
+    top:0%;
+  }
+}
+
+.title2 {
+  animation-name: intro;
+  animation-duration:0.2s;
+  animation-iteration-count:1;
+  animation-timing-function:ease;
+  animation-delay:1.2s;
+  animation-fill-mode:backwards;
+ }
+
+.title3 {
+  animation-name: intro;
+  animation-duration:0.2s;
+  animation-iteration-count:1;
+  animation-timing-function:ease;
+  animation-delay:1.4s;
+  animation-fill-mode:backwards;
+ }
+
+.title4 {
+
+  animation-name: intro;
+  animation-duration:0.2s;
+  animation-iteration-count:1;
+  animation-timing-function:ease;
+  animation-delay:1.6s;
+  animation-fill-mode:backwards;
+ }
+
+
+.title5 {
+
+  animation-name: intro;
+  animation-duration:0.2s;
+  animation-iteration-count:1;
+  animation-timing-function:ease;
+  animation-delay:1.8s;
+  animation-fill-mode:backwards;
+ }
+
+/*----------------Main Content Area(this is where all the content below the navigation bar will go)--*/
+.row {
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 0; /*(centers content within the row)*/
+	position: relative;
+	padding: 25px 45px;
+    text-align: center;
+}
+
+article {
+	max-width: 1100px;
+	margin-left: auto;
+	margin-right: auto;
+	line-height: 20px;
+}
+
+h1 {
+	line-height: 1.5;
+	text-transform: uppercase;
+	font-size: 16px;
+    color: lightgray;
+}
+
+h2 {
+	font-family: "Palatino";
+    text-align: center;
+    font-size: 55px;
+    font-weight: 900;
+    color: #b37232;
+    background: -webkit-linear-gradient(left,#b37232,#b37232,#bf5833);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    line-height: initial;
+}
+
+
+p {
+	line-height: 1.5;
+}
+
+/*----------------SLIDESHOW-----------------*/
+
+#slider {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  z-index: 1;
+  position: relative;        
+}
+
+/* prev / next links */
+.cycle-prev, .cycle-next { 
+  position: absolute;
+  top: 0;
+  width: 30%;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  z-index: 800;
+  height: 100%;
+  cursor: pointer; 
+  }
+  
+.cycle-prev { 
+  left: 0;
+  background: url(img/arrowleft.png) 50% 50% no-repeat;
+  }
+  
+.cycle-next { 
+right: 0;
+background: url(img/arrowright.png) 50% 50% no-repeat;
+}
+
+.cycle-prev:hover, .cycle-next:hover { 
+opacity: 1;
+filter: alpha(opacity=70)
+}
+
+
+/* captions below slideshow*/
+#alt-caption {
+    background-color: #c9b0a5;
+    background-color: #c9b0a5;
+    color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: .9em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 55px;
+}
+
+/*----------------VIDEO-----------------*/
+video {
+    position: relative;
+    width: 100%;    
+}
+
+/*----------------FOOTER-----------------*/
+footer {
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 25px;
+	padding-right: 25px;
+	text-align: center;
+	font-size: 10px;
+}
+/*(footer links)*/
+footer a {
+	text-decoration: none; /*(nullifies underline)*/
+	color: #000000;
+	font-family: 'Open Sans', sans-serif;
+}
+/*(link color when moused over)*/
+footer a:hover {
+	color: #b29643;
+}
+
+
+/*----------------AUDIO BOARD-----------------*/
+
+.table {
+	position: relative;
+	text-align: center;
+	color: greenyellow;
+	font-size: 0vw;
+    
+}
+
+.trip {text-align:center;}
+
+.trip img{
+  display:inline-block;
+  width:30%;
+  margin:0 1% 0 1%;
+  }
+
+.rollover {
+	cursor: pointer;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/*--------------background colors----------*/
+.whiteBG {
+	background-color: white;
+}
+
+.blueBG {
+	background: -webkit-linear-gradient(left,#f0eae4, #f0eae4, #f0eae4);
+}
+
+.orangeBG {
+	background-color: #f0eae4;
+}
+
+.offwhiteBG {
+	background-color: whites;
+    height: 600px
+}
+
+/*----------------back to top button-----------------*/
+#myBtn {
+  
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #b37232; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-family: 'Century gothic', sans-serif;
+  font-size: 10px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color:#8d3917;
+  opacity: 0.75;   
+}
+
+/*-----animated welcome-----*/
+html{
+			margin:0;
+			padding:0;
+			width:100%;
+		}
+		body{
+			margin:0;
+			padding:0;
+			width:100%;
+			text-align:center;
+			background-size:cover;
+            background:url(hd.jpg) no-repeat 50% 50%;
+			height: 100vh;
+		/*-----causing issues-----*	display:table; /*-----animated welcome-----*/
+		}
+		.wrapper{
+		
+			position:absolute;
+			top:52%;
+			left: 53%;
+			transform: translate(-50%, -50%);
+			width:60%;
+		}
+		
+		path{		
+			stroke:#fff;
+			fill:#fff;
+			stroke-dasharray:1800;
+			opacity:10;
+			animation:animate 10s cubic-bezier(0,.23,1,.1) infinite;
+			}
+		@keyframes animate{
+			20%{
+				opacity:10;
+				fill:none;
+				stroke-dashoffset:1800;}
+			90%{
+				fill:rgba(255,255,255,0);}
+			100%{
+			     opacity:10;
+				fill:rgba(255,255,255,1);
+				stroke-dashoffset:0;}
+		}
+/*----smooth scroll----*/
+html {
+  scroll-behavior: smooth
+}
+
+/*----menu dissapear when scroll---*/
+.nav-up {
+  top: -105px; 
+}
